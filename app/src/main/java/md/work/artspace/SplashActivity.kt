@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : BaseActivity() {
     private val handler = Handler()
     private lateinit var runnable: Runnable
 
