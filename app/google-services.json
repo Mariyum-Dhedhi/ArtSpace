@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "430874105814",
+    "project_id": "artspace-fb4f0",
+    "storage_bucket": "artspace-fb4f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430874105814:android:fb85c11ced7a5a9ebd7677",
+        "android_client_info": {
+          "package_name": "md.work.artspace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "430874105814-bnssukbu5u290i04at0gemtgqvdihiha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8_aiG-OrLWcdYDqrOpgbE4qW54U-p2Kk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "430874105814-bnssukbu5u290i04at0gemtgqvdihiha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
