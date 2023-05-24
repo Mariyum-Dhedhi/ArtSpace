@@ -20,7 +20,7 @@ class SplashActivity : BaseActivity() {
             }
         }
 
-        handler.postDelayed(runnable,3000)
+        handler.postDelayed(runnable,100)
     }
 
     override fun onDestroy() {

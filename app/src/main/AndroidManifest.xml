@@ -26,7 +26,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".`Login Activity`"
+            android:name=".activities.LoginActivity"
             android:exported="false">
 
             <meta-data
