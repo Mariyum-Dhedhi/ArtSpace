@@ -9,10 +9,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import md.work.artspace.R
 import md.work.artspace.data.User
 import md.work.artspace.databinding.FragmentSignupBinding
 import md.work.artspace.util.Resource
+import md.work.artspace.util.SignupValidation
 import md.work.artspace.viewmodel.SignUpViewModel
 
 private val TAG = "SignupFragment"
@@ -62,6 +65,26 @@ class SignupFragment : Fragment(){
                         binding.signupButton.revertAnimation()
                     }
                     else -> Unit
+                }
+            }
+        }
+        lifecycleScope.launchWhenStarted {
+            viewModel.validation.collect { validation ->
+                if (validation.email is SignupValidation.Failed) {
+                    withContext(Dispatchers.Main) {
+                        binding.etSignupEmail.apply {
+                            requestFocus()
+                            error = validation.email.message
+                        }
+                    }
+                }
+                if (validation.password is SignupValidation.Failed) {
+                    withContext(Dispatchers.Main) {
+                        binding.etSignupPassword.apply {
+                            requestFocus()
+                            error = validation.password.message
+                        }
+                    }
                 }
             }
         }
