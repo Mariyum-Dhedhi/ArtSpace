@@ -69,7 +69,7 @@
         app:layout_constraintVertical_bias="0.8" />
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/nextButton"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:background="@drawable/bg_greycircle"
@@ -84,10 +84,10 @@
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:src="@drawable/ic_arrow_forward"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/nextButton"
+        app:layout_constraintEnd_toEndOf="@+id/nextButton"
+        app:layout_constraintStart_toStartOf="@+id/nextButton"
+        app:layout_constraintTop_toTopOf="@+id/nextButton"
         android:tintMode="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

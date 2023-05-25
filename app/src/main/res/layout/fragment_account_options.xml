@@ -7,7 +7,7 @@
     android:background="@drawable/gradient">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logoView"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/art_space_logo"
@@ -29,11 +29,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/logoView"
         app:layout_constraintVertical_bias="0.05" />
 
     <Button
-        android:id="@+id/signupButton"
+        android:id="@+id/loginButtonAccOption"
         style="@style/buttonStyleWhite"
         android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,12 +43,13 @@
         app:layout_constraintVertical_bias="0.14" />
 
     <Button
+        android:id="@+id/signupButtonAccOption"
         style="@style/buttonStyleTransparent"
         android:text="Sign Up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupButton"
+        app:layout_constraintTop_toBottomOf="@+id/loginButtonAccOption"
         app:layout_constraintVertical_bias="0.05" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
