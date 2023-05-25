@@ -3,6 +3,7 @@ package md.work.artspace.activities
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import dagger.hilt.android.AndroidEntryPoint
 import md.work.artspace.R
 
 class SplashActivity : BaseActivity() {
@@ -14,7 +15,7 @@ class SplashActivity : BaseActivity() {
         setContentView(R.layout.activity_splash)
 
         runnable = Runnable {
-            Intent(this, LoginActivity::class.java).apply {
+            Intent(this, LoginSignupActivity::class.java).apply {
                 startActivity(this)
                 finish()
             }

@@ -66,7 +66,6 @@
         android:id="@+id/etSignupFName"
         style="@style/editText"
         android:hint="FirstName"
-        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,7 +76,6 @@
         android:id="@+id/etSignupLName"
         style="@style/editText"
         android:hint="Last Name"
-        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,7 +104,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etSignupEmail"
         app:layout_constraintVertical_bias="0.06" />
 
-    <Button
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
         android:id="@+id/signupButton"
         style="@style/buttonStyleWhite"
         android:text="Sign Up"
