@@ -95,6 +95,7 @@
         app:layout_constraintVertical_bias="0.2" />
 
     <TextView
+        android:id="@+id/tvForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -110,7 +111,7 @@
         app:layout_constraintVertical_bias="0.3" />
 
     <TextView
-        android:id="@+id/signupNow"
+        android:id="@+id/tvSignupNow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
