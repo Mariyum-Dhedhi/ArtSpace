@@ -3,11 +3,10 @@ package md.work.artspace.fragments.shopping
 import androidx.fragment.app.Fragment
 import md.work.artspace.R
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.kelineyt.adapters.HomeViewpagerAdapter
+import md.work.artspace.adapters.HomeViewpagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import md.work.artspace.databinding.FragmentHomeBinding
 import md.work.artspace.fragments.categories.*

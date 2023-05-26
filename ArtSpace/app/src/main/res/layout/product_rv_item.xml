@@ -14,14 +14,12 @@
 
         <ImageView
             android:id="@+id/img_product"
-            android:padding="10dp"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:background="@drawable/bg_round_corners"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:scaleType="fitCenter"/>
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <ImageView
             android:id="@+id/img_favorite"
@@ -94,6 +92,7 @@
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/sf_pro_display"
             android:text="$1600"
+            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -110,7 +109,6 @@
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/sf_pro_display"
             android:text="$1600"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="parent"
