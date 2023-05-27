@@ -19,7 +19,8 @@
             android:background="@drawable/bg_round_corners"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitCenter"/>
 
         <ImageView
             android:id="@+id/img_favorite"

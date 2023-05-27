@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import md.work.artspace.R
 import md.work.artspace.adapters.BestProductsAdapter
 import md.work.artspace.databinding.FragmentBaseCategoryBinding
+import md.work.artspace.util.showBottomNavigationView
 
 open class BaseCategoryFragment: Fragment(R.layout.fragment_base_category) {
     private lateinit var binding: FragmentBaseCategoryBinding
@@ -30,40 +31,35 @@ open class BaseCategoryFragment: Fragment(R.layout.fragment_base_category) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupBestProductsRv()
+        setupProducts()
 
         productsAdapter.onClick = {
             val b = Bundle().apply { putParcelable("product",it) }
             findNavController().navigate(R.id.action_homeFragment_to_productDetailsFragment,b)
         }
 
-        binding.nestedScrollBaseCategory.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener{ v, _, scrollY, _, _ ->
-            if (v.getChildAt(0).bottom <= v.height + scrollY){
-            }
-        })
     }
 
-
-    fun showBestProductsLoading(){
-        binding.productsProgressbar.visibility = View.VISIBLE
-    }
-
-    fun hideBestProductsLoading(){
-        binding.productsProgressbar.visibility = View.GONE
-    }
-
-    private fun setupBestProductsRv() {
-        binding.rvBestProducts.apply {
+    private fun setupProducts() {
+        binding.rvProducts.apply {
             layoutManager =
-                GridLayoutManager(requireContext(), 2, GridLayoutManager.VERTICAL, false)
+                LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
             adapter = productsAdapter
         }
     }
 
+    fun showLoading(){
+        binding.productsProgressbar.visibility = View.VISIBLE
+    }
 
-//    override fun onResume() {
-//        super.onResume()
-//        showBottomNavigationView()
-//    }
+    fun hideLoading(){
+        binding.productsProgressbar.visibility = View.GONE
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+        showBottomNavigationView()
+    }
 
 }

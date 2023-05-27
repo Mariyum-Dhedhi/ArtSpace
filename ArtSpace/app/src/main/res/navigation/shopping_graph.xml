@@ -9,7 +9,11 @@
         android:id="@+id/cartFragment"
         android:name="md.work.artspace.fragments.shopping.CartFragment"
         android:label="CartFragment"
-        tools:layout="@layout/fragment_cart"/>
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_cartFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="md.work.artspace.fragments.shopping.HomeFragment"
@@ -23,7 +27,11 @@
         android:id="@+id/searchFragment"
         android:name="md.work.artspace.fragments.shopping.SearchFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/fragment_search"/>
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="md.work.artspace.fragments.shopping.ProfileFragment"
@@ -33,5 +41,9 @@
         android:id="@+id/productDetailsFragment"
         android:name="md.work.artspace.fragments.shopping.ProductDetailsFragment"
         android:label="ProductDetailsFragment"
-        tools:layout=""/>
+        tools:layout="">
+        <argument
+            android:name="product"
+            app:argType="md.work.artspace.data.Product" />
+    </fragment>
 </navigation>

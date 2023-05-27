@@ -51,7 +51,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 4 -> tab.text = "Minimalist"
                 5 -> tab.text = "Surrealist"
                 6 -> tab.text = "Portraiture"
-                7 -> tab.text = "StillLife"
+                7 -> tab.text = "Still Life"
                 8 -> tab.text = "Pop"
                 9 -> tab.text = "Typography"
             }

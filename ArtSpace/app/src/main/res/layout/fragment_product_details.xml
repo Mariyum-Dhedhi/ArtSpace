@@ -149,7 +149,7 @@
                 app:layout_constraintTop_toBottomOf="@id/linearTitlePrice"
                 app:layout_constraintStart_toStartOf="@id/linearTitlePrice"
                 android:textSize="11.9sp"
-                android:text="Note: Actual colours may vary due to photography & computer settings."/>
+                android:text="Note: Actual colours may vary due to photography ＆ computer settings."/>
 
         </LinearLayout>
 
