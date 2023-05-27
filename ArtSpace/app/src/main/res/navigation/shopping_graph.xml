@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_cartFragment_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_billingFragment2"
+            app:destination="@id/billingFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -36,14 +39,70 @@
         android:id="@+id/profileFragment"
         android:name="md.work.artspace.fragments.shopping.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_userAccountFragment"
+            app:destination="@id/userAccountFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_allOrdersFragment"
+            app:destination="@id/allOrdersFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_billingFragment"
+            app:destination="@id/billingFragment" />
+    </fragment>
     <fragment
         android:id="@+id/productDetailsFragment"
         android:name="md.work.artspace.fragments.shopping.ProductDetailsFragment"
         android:label="ProductDetailsFragment"
-        tools:layout="">
+        tools:layout="@layout/fragment_product_details">
         <argument
             android:name="product"
             app:argType="md.work.artspace.data.Product" />
+    </fragment>
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="md.work.artspace.fragments.shopping.AddressFragment"
+        android:label="AddressFragment"
+        tools:layout="@layout/fragment_address"/>
+    <fragment
+        android:id="@+id/billingFragment"
+        android:name="md.work.artspace.fragments.shopping.BillingFragment"
+        android:label="BillingFragment"
+        tools:layout="@layout/fragment_billing">
+        <action
+            android:id="@+id/action_billingFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+        <argument
+            android:name="totalPrice"
+            app:argType="float" />
+        <argument
+            android:name="products"
+            app:argType="md.work.artspace.data.CartProduct[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/userAccountFragment"
+        android:name="md.work.artspace.fragments.settings.UserAccountFragment"
+        android:label="UserAccountFragment"
+        tools:layout="@layout/fragment_user_account"/>
+    <fragment
+        android:id="@+id/allOrdersFragment"
+        android:name="md.work.artspace.fragments.settings.AllOrdersFragment"
+        android:label="AllOrdersFragment"
+        tools:layout="@layout/fragment_orders">
+        <action
+            android:id="@+id/action_ordersFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="md.work.artspace.fragments.settings.OrderDetailFragment"
+        android:label="OrderDetailFragment"
+        tools:layout="@layout/fragment_order_detail">
+        <argument
+            android:name="order"
+            app:argType="md.work.artspace.data.order.Order" />
     </fragment>
 </navigation>
